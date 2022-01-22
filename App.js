@@ -1,23 +1,16 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native";
 
 import Home from "./screens/Home";
-import SearchBar from "./components/SearchBar";
-import Categories from "./components/Categories";
+import RestaurantDetail from "./screens/RestaurantDetail";
 
 const App = () => {
 	return (
 		<SafeAreaView style={{ backgroundColor: "#eee", flex: 1 }}>
-			<View style={{ backgroundColor: "#fff", padding: 15 }}>
-				<Home />
-				<SearchBar />
-				<Categories />
-				<StatusBar style="auto" />
-			</View>
+			<StatusBar style="auto" />
+			<RestaurantDetail />
 		</SafeAreaView>
 	);
 };
 export default App;
-
-const styles = StyleSheet.create({});
