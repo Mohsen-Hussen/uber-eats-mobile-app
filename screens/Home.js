@@ -8,12 +8,12 @@ import RestaurantItems, {
 } from "../components/home/RestaurantItems";
 import SearchBar from "../components/home/SearchBar";
 import { Divider } from "react-native-elements";
-import BottomTabs from "../components/home/BottomTabs"
+import BottomTabs from "../components/home/BottomTabs";
 
 const YELP_API_KEY =
 	"Gs8pnf8k0OQj64V97TumnZplT1IqnvE5zERx0XpRrkUq-vrk-ScmCIyn2BvN76SgjKRhldhzOHcmJDBMR-RXZ30r3RmFpgsRQCT-0S-IkU94VPaxAR73Ox_IwVXsYXYx";
 
-const Home = () => {
+const Home = ({ navigation }) => {
 	const [restaurantData, setRestaurantData] = useState(localRestaurants);
 	const [activeTab, setActiveTab] = useState("Delivery");
 	const [city, setCity] = useState("San Francisco");
@@ -50,7 +50,10 @@ const Home = () => {
 			</View>
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<Categories />
-				<RestaurantItems restaurantData={restaurantData} />
+				<RestaurantItems
+					restaurantData={restaurantData}
+					navigation={navigation}
+				/>
 			</ScrollView>
 			<Divider width={4} />
 			<BottomTabs />
