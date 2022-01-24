@@ -22,13 +22,14 @@ const ViewCart = ({ navigation }) => {
 	});
 
 	const addOrderToFireBase = () => {
-		const db = firebase.firestore();
-		db.collection("orders").add({
-			items: items,
-			restaurantName: restaurantName,
-			createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-		});
+		// const db = firebase.firestore();
+		// db.collection("orders").add({
+		// 	items: items,
+		// 	restaurantName: restaurantName,
+		// 	createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+		// });
 		setModalVisible(false);
+		navigation.navigate("OrderCompleted");
 		// .then(() => {
 		// 	setTimeout(() => {
 		// 		navigation.navigate("OrderCompleted");

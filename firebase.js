@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyB0bLR3xuLgKvCTO-aNn1Lpbkc-8Pyyg0s",
-	authDomain: "rn-uber-eats-clone-5346f.firebaseapp.com",
-	projectId: "rn-uber-eats-clone-5346f",
-	storageBucket: "rn-uber-eats-clone-5346f.appspot.com",
-	messagingSenderId: "411109152433",
-	appId: "1:411109152433:web:6e00e3092197878fb47490",
+  apiKey: "AIzaSyCsgb5Ri0DRK9gE0nJ0PYCh9BLByhbJatE",
+  authDomain: "rn-uber-eats-clone-yt.firebaseapp.com",
+  projectId: "rn-uber-eats-clone-yt",
+  storageBucket: "rn-uber-eats-clone-yt.appspot.com",
+  messagingSenderId: "791658363133",
+  appId: "1:791658363133:web:91e4fe1be6f3f23467a694",
 };
 
 !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
